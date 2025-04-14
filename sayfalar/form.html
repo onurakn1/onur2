@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Efsane Ekle</title>
+</head>
+<body>
+
+  <!-- ANA SAYFA LİNKİ -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Ana Sayfa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Eklemek İstediğiniz Efsaneler</h2>
+  <form id="legendForm">
+    <label for="name">Adınız:</label>
+    <input type="text" id="name" name="user_name" required><br><br>
+
+    <label for="email">E-posta:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Telefon Numaranız:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+
+    <label for="legend">Efsane:</label>
+    <input type="text" id="legend" name="legend" required><br><br>
+
+    <label for="comment">Neden Eklemek İstiyorsunuz:</label><br>
+    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Gönder">
+  </form>
+
+  <script>
+    document.getElementById("legendForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const legend = document.getElementById("legend").value;
+      const comment = document.getElementById("comment").value;
+
+      const params = new URLSearchParams({
+        name,
+        email,
+        phone,
+        legend,
+        comment
+      });
+
+      window.location.href = `sonuc.html?${params.toString()}`;
+    });
+  </script>
+
+</body>
+</html>
+
+
+  
+
