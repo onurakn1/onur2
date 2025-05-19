@@ -2,15 +2,27 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Efsane Ekle</title>
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
 
-  <!-- ANA SAYFA LİNKİ -->
+  <!-- NAVBAR -->
   <header>
     <nav>
       <ul>
-        <li><a href="../index.html">Ana Sayfa</a></li>
+        <li><a href="../index.html">Anasayfa</a></li>
+        <li><a href="form.html">Efsane Ekle</a></li>
+        <li><a href="tablo.html">Başarı Tablosu</a></li>
+        <li><a href="map.html">Stadyum Haritası</a></li>
+        <li><a href="superlig_puan_durumu.html">Puan Durumu</a></li>
+        <li><a href="fenerbahce_fiksturu.html">Fikstür</a></li>
+        <li><a href="ezeli_rakipler.html">Ezeli Rakipler</a></li>
+        <li><a href="hakkinda.html">Hakkında</a></li>
+        <li><a href="oyun.html">Quiz Oyunu</a></li>
+        <li><a href="baskanlar.html">Kulüp Başkanları</a></li>
       </ul>
     </nav>
   </header>
@@ -34,32 +46,11 @@
 
     <input type="submit" value="Gönder">
   </form>
+  
+<footer style="background-color: #003366; color: white; text-align: center; padding: 15px; margin-top: 40px;">
+  <p>&copy; Fenerbahçe Tanıtım Sitesi</p>
+</footer>
 
-  <script>
-    document.getElementById("legendForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const legend = document.getElementById("legend").value;
-      const comment = document.getElementById("comment").value;
-
-      const params = new URLSearchParams({
-        name,
-        email,
-        phone,
-        legend,
-        comment
-      });
-
-      window.location.href = `sonuc.html?${params.toString()}`;
-    });
-  </script>
-
+  <script src="../scripts/myscript.js"></script>
 </body>
 </html>
-
-
-  
-
